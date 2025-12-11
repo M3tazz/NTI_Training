@@ -1,7 +1,7 @@
 
 ---
 
-# 🚀 NTI Web Development Journey (17 Days)
+# 🚀 NTI Web Development Journey (26 Days)
 
 Welcome to my **NTI Full-Stack Web Development Learning Journey**.
 This repository documents everything I’ve learned, practiced, and built — day by day — from **JavaScript basics** to **advanced backend development** with **Node.js, Express, MongoDB, Redis, and more**.
@@ -35,6 +35,14 @@ Each folder (`Day01`, `Day02`, …) contains:
 | [Day 15](./Day15_ErrorHandling_Security/README.md) | Error Handling, Security & Atlas             | Global error handling, security, Atlas setup                   |
 | [Day 16](./Day16_TeamProject_AudioAPI/README.md)   | Team Project: Audio Library API              | Full backend app with auth, uploads, streaming                 |
 | [Day 17](./Day17_Caching_Logging/README.md)        | Caching & Logging                            | Redis caching, Winston logging                                 |
+| [Day 19](./Day19_Backend_Testing_&_API_Documentation/README.md) | Backend Testing & API Documentation | Unit testing, Jest basics, Postman API docs                |
+| [Day 20](./Day17_Project_Assignment/README.md)     | Project Assignment                           | Full backend project applying all concepts                     |
+| [Day 21](./Day17_Introduction_to_TypeScript/README.md) | Introduction to TypeScript               | Types, interfaces, enums, TS basics                            |
+| [Day 22](./Day17_TypeScript_Deep_Dive/README.md)   | TypeScript Deep Dive                         | Generics, advanced types, narrowing                            |
+| [Day 23](./Day17_Introduction_to_Angular/README.md) | Introduction to Angular                     | Angular structure, components, CLI                             |
+| [Day 24](./Day17_Binding/README.md)                | Binding                                      | Property binding, event binding                                |
+| [Day 25](./Day17_Control_Flow_&_Two-Way_Binding/README.md) | Control Flow & Two-Way Binding       | ngIf, ngFor, ngSwitch, ngModel                                 |
+| [Day 26](./Day17_Routing_Basics_&_Components_Communication/README.md) | Routing Basics & Components Communication | RouterModule, routes, Input/Output             |
 
 ---
 
@@ -84,7 +92,7 @@ This project represented the **culmination** of all skills learned across the NT
 
 ## 📈 My Progress Reflection
 
-By Day 17, I have:
+By Day 26, I have:
 
 * Built multiple APIs using **Express + MongoDB**
 * Designed clean project structures following the **MVC pattern**
