@@ -1,0 +1,15 @@
+<div [class.liked]="isLiked">
+  <h4>Name: {{ productName }}</h4>
+  <p>Price: {{ productPrice }}</p>
+  <img [src]="productImageSrc" style="width: 50px" alt="Not found" />
+  <button
+    (click)="markAsLiked()"
+    [style.color]="isLiked ? 'orange' : 'white'"
+    [style.background-color]="isLiked ? 'green' : 'black'"
+  >
+    Like ❤️
+  </button>
+</div>
+<br />
+<hr />
+<br />
