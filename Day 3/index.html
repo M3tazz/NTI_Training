@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #para {
+        background-color: red;
+        color: white;
+        padding: 5px;
+        text-align: center;
+        transition: all 0.3s ease-in-out;
+      }
+      #para:hover {
+        background-color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <button class="first">first</button>
+    <button class="second">second</button>
+    <p id="para">
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quo, dolorem!
+    </p>
+    <p id="result">waiting ...</p>
+
+    <script type="module" src="main.js"></script>
+    <script src="events.js"></script>
+  </body>
+</html>
