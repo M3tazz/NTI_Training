@@ -1,0 +1,105 @@
+openapi: 3.0.0
+info:
+  title: Books API
+  version: 1.0.0
+  description: Simple API for managing books
+
+servers:
+  - url: http://localhost:3000
+    description: Local development server
+
+paths:
+  /books:
+    get:
+      summary: Get all books
+      responses:
+        200:
+          description: List of all books
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    id:
+                      type: integer
+                      example: 1
+                    title:
+                      type: string
+                      example: Learn Node.js
+    post:
+      summary: Add a new book
+      responses:
+        201:
+          description: Book added successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Book added
+
+  /books/{id}:
+    get:
+      summary: Get book by ID
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        200:
+          description: Book found
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: integer
+                    example: 1
+                  title:
+                    type: string
+                    example: Express Basics
+    put:
+      summary: Update a book by ID
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        200:
+          description: Book updated successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Book updated
+    delete:
+      summary: Delete a book by ID
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        200:
+          description: Book deleted successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Book deleted
