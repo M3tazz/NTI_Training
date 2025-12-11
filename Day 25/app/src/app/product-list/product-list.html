@@ -1,0 +1,105 @@
+<h1 style="color: darkgreen">Moataz Hamdy</h1>
+<br />
+<!-- Task One -->
+<h1>Task One</h1>
+<div class="products-container">
+  @for (pro of products; track $index) {
+  <div class="product-card">
+    <p>{{ pro.title }}</p>
+  </div>
+  }
+</div>
+
+<!-- Task Two -->
+<h1>Task Two</h1>
+<div class="products-container">
+  @for (pro of products; track $index) {
+  <div class="product-card">
+    <img [src]="pro.image" alt="..." />
+    <p>{{ pro.title }}</p>
+    <p>{{ pro.price }} $</p>
+  </div>
+  }
+</div>
+
+<!-- Task Four -->
+<h1>Task Four</h1>
+<input [(ngModel)]="filterKeyword" placeholder="Search product title..." />
+<div class="products-container">
+  @for (pro of products; track $index) { @if
+  (pro.title.toLowerCase().includes(filterKeyword.toLowerCase())) {
+  <div class="product-card">
+    <img [src]="pro.image" alt="..." />
+    <p>{{ pro.title }}</p>
+    <p>{{ pro.price }} $</p>
+  </div>
+  } }
+</div>
+
+<!-- Task Five -->
+<h1>Task Five</h1>
+<div class="products-container">
+  @for (pro of products; track $index) { @if (pro.isFeatured) {
+  <div class="product-card">
+    <p>index: {{ $index }}</p>
+    <p>🌟 Featured Product</p>
+  </div>
+  } }
+</div>
+
+<!-- Task Six -->
+<h1>Task Six</h1>
+<div class="products-container">
+  @for (pro of products; track $index) { @if (pro.isFeatured) {
+  <p>index: {{ $index }}</p>
+  <div class="product-card highlight">🌟 Featured</div>
+  } }
+</div>
+
+<!-- Task Seven -->
+<h1>Task Seven</h1>
+<!-- - Green if `rate >= 4`
+- Orange if `rate >= 3 && rate < 4`
+- Red if `rate < 3` -->
+<p>Green if (rate >= 4)</p>
+<p>Orange if (rate >= 3 && rate < 4 )</p>
+<p>Red if (rate < 3)</p>
+<div class="products-container">
+  @for (pro of products; track $index) {
+  <div class="product-card">
+    <p [style.color]="getColor(pro.rating.rate)" class="rating">⭐ {{ pro.rating.rate }}</p>
+  </div>
+  }
+</div>
+
+<!-- Task Eight -->
+<h1>Task Eight</h1>
+<div class="products-container">
+  @for (pro of products; track $index) {
+  <div class="product-card">
+    @switch (pro.category) { @case ("men's clothing") {
+    <p>This is men's clothing</p>
+    } @case ("women's clothing") {
+    <p>This is women's clothing</p>
+    } @case ('jewelery') {
+    <p>This is an accessory</p>
+    } @case ('electronics') {
+    <p>This is an electronic product</p>
+    } @default {
+    <p>Unknown category</p>
+    } }
+  </div>
+  }
+</div>
+
+<!-- Task Nine -->
+<h1>Task Nine</h1>
+<div class="products-container">
+  @for (pro of products; track $index) {
+  <div class="product-card">
+    @for (tag of pro.tags; track $index) {
+    <button>{{ tag }}</button>
+    }
+  </div>
+  }
+</div>
